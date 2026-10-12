@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+    --color-brand-dark: #000000;
+    --color-brand-card: #0A0A0A;
+    --color-brand-primary: #DC2626;
+    --color-brand-primary_hover: #B91C1C;
+    --color-brand-accent: #FFFFFF;
+}
+
+body {
+    background-color: var(--color-brand-dark);
+    color: var(--color-brand-accent);
+}
+
+.glass-nav {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #DC2626, #FFFFFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.feature-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-brand-primary);
+    box-shadow: 0 10px 30px -10px rgba(220, 38, 38, 0.3);
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
